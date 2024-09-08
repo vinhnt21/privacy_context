@@ -1,0 +1,36 @@
+Enter your question: How many John Doe has transferred?
+Question: How many John Doe has transferred?
+Getting context...
+Context: Financial Transactions
+John Doe transferred $500 to Jane Smith on 2023-01-15.
+Acme Corp paid $10,000 to XYZ Inc for consulting services on 2023-02-28.
+Mary Johnson deposited $2,500 into her savings account at Big Bank on 2023-03-10.
+Robert Brown withdrew $300 from his checking account at Local Credit Union on 2023-04-05.
+Daniel Lee donated $100 to Charity Organization on 2023-1 1-08.
+Sophia Kim received a salary payment of $4,000 from Employer Corp on 2023-12-01.
+Michael Rodriguez sold 100 shares of T echCo stock for $20 per share on 2023-09-18.
+Olivia Davis bought a new car for $30,000 from Car Dealership Inc on 2023-10-25.
+Encoding context and question...
+Words list: [('John', 'name'), ('Doe', 'name'), ('$500', 'number'), ('Jane', 'name'), ('Smith', 'name'), 
+('2023-01-15', 'date'), ('Acme Corp', 'company'), ('XYZ Inc', 'company'), ('2023-02-28', 'date'), 
+('$10,000', 'number'), ('Big Bank', 'bank'), ('Mary Johnson', 'name'), ('$2,500', 'number'), 
+('Robert Brown', 'name'), ('$300', 'number'), ('Local Credit Union', 'bank'), ('Daniel Lee', 'name'), 
+('$100', 'number'), ('Charity Organization', 'organization'), ('Sophia Kim', 'name'), ('Employer Corp', 'company'), 
+('$4,000', 'number'), ('2023-12-01', 'date'), ('Michael Rodriguez', 'name'), ('$20', 'number'), 
+('T echCo', 'company'), ('100', 'number'), ('Olivia Davis', 'name'), ('$30,000', 'number'), 
+('Car Dealership Inc', 'company')]
+Encoded context: Financial Transactions
+[name1] [name2] transferred [number3] to [name4] [name5] on [date6].
+[company7] paid [number10] to [company8] for consulting services on [date9].
+Mary [name1]son deposited [number13] into her savings account at [bank11] on 2023-03-10.
+[name14] withdrew [number15] from his checking account at [bank16] on 2023-04-05.
+[name17] donated [number18] to [organization19] on 2023-1 1-08.
+[name20] received a salary payment of [number22] from [company21] on [date23].
+[name24] sold [number27] shares of [company26] stock for [number25] per share on 2023-09-18.
+[name28] bought a new car for [number29] from [company30] on 2023-10-25.
+Encoded question: How many [name1] [name2] has transferred?
+Abstract answer: [number3]
+Decoded answer: $500
+====================
+Answer: $500
+==================================================
