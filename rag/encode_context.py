@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from rag.rag_services import llm, local_llm
+from rag.rag_services import *
 
 
 def detect_words(context: str, question: str) -> str:
@@ -55,6 +55,12 @@ def make_context_abstract(context, question, words_list):
         question_abstract = question_abstract.replace(word, placeholder)
 
     return context_abstract, question_abstract
+
+
+def get_words_list(context: str, question: str) -> list:
+    doc = nlp(context + question)
+    words_list = [(entity.text, entity.label_) for entity in doc.ents]
+    return words_list
 
 
 def send_to_cloud_model(encoded_context: str, encoded_question: str) -> str:

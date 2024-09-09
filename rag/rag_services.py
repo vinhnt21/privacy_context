@@ -19,9 +19,11 @@ local_llm = ChatOllama(
     num_predict=256,  # Giữ nguyên để tạo câu trả lời đủ dài
     top_p=0.9,  # Đảm bảo câu trả lời đa dạng nhưng không quá ngẫu nhiên
     top_k=50,  # Giới hạn số lượng từ xem xét để tăng độ kiểm soát
-    max_length=512,  # Độ dài tối đa cho câu trả lời
     repetition_penalty=1.2,  # Tránh lặp lại câu trả lời
     use_gpu=True,  # Sử dụng GPU nếu có để tăng tốc độ
 )
 
 
+import spacy
+# Load a pre-trained NER model (e.g., en_core_web_sm)
+nlp = spacy.load('en_core_web_sm')

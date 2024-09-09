@@ -26,4 +26,3 @@ def get_context(question: str) -> str:
     return '\n'.join(res)
 
 
-print("How many John Doe has transferred?")
